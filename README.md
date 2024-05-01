@@ -11,8 +11,8 @@ WPF MVVM 학습 리포지토리
 ### EmployeeMngApp
 - SQLServer와 데이터바인딩 확인
 
+	![이미지](https://raw.githubusercontent.com/hugoMGSung/study-wpf-mvvm/main/images/mvvm001.png)
 
-	
 
 ## Basic Avaloina
 - Avalonia for Visual Studio 설치
