@@ -27,8 +27,8 @@ namespace NewEmployeeMngApp.Views
         {
             InitializeComponent();
 
-            //Common.DialogCoordinator =  DialogCoordinator.Instance;
-            //this.DataContext = Common.DialogCoordinator;
+            Common.DialogCoordinator = DialogCoordinator.Instance;
+            this.DataContext = Common.DialogCoordinator;
         }
     }
 }

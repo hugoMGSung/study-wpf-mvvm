@@ -10,6 +10,6 @@ namespace NewEmployeeMngApp.Helpers
                                                    "User ID=ems_user;Encrypt=False;" +
                                                    "Password=ems_p@ss;";
 
-        //public static IDialogCoordinator DialogCoordinator { get; set; }
+        public static IDialogCoordinator DialogCoordinator { get; set; }
     }
 }

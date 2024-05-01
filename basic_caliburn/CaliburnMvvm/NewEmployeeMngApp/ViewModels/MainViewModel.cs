@@ -151,12 +151,12 @@ namespace NewEmployeeMngApp.ViewModels
             get => !string.IsNullOrEmpty(EmpName) && Salary > 0 && !string.IsNullOrEmpty(DeptName);
         }
 
-        public void SaveEmployee()
+        public async void SaveEmployee()
         {
-            //if (Common.DialogCoordinator != null)
-            //{
-            //    this.dialogCoordinator = Common.DialogCoordinator;
-            //}
+            if (Common.DialogCoordinator != null)
+            {
+                this.dialogCoordinator = Common.DialogCoordinator;
+            }
 
             int resultRow = 0;  // UPDATE 기본 1, INSERT 기본 1
 
@@ -198,8 +198,8 @@ namespace NewEmployeeMngApp.ViewModels
 
                     if (resultRow > 0)
                     {
-                        //await this.dialogCoordinator.ShowMessageAsync(this, "저장되었습니다", "저장");
-                        MessageBox.Show("저장되었습니다!");
+                        await this.dialogCoordinator.ShowMessageAsync(this, "저장되었습니다", "저장");
+                        //MessageBox.Show("저장되었습니다!");
                         GetEmployees();
                     }
                     else

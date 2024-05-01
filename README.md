@@ -13,6 +13,9 @@ WPF MVVM 학습 리포지토리
 
 	![이미지](https://raw.githubusercontent.com/hugoMGSung/study-wpf-mvvm/main/images/mvvm001.png)
 
+- 다이얼로그 문제 해결
+
+	![다이얼로그](https://raw.githubusercontent.com/hugoMGSung/study-wpf-mvvm/main/images/mvvm002.png)
 
 ## Basic Avaloina
 - Avalonia for Visual Studio 설치
