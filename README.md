@@ -4,7 +4,15 @@ WPF MVVM 학습 리포지토리
 ## Basic Caliburn
 - Caliburn.Micro 패키지 사용
 	- NuGet 패키지 Caliburn.Micro 설치(.NET Framework, .NET 6.0 모두 사용 가능)
-	
+
+### CaliburnStartup
+- Caliburn.Micro 로 MVVM 기본 구현
+
+### EmployeeMngApp
+- SQLServer와 데이터바인딩 확인
+
+
+
 
 ## Basic Avaloina
 - Avalonia for Visual Studio 설치
