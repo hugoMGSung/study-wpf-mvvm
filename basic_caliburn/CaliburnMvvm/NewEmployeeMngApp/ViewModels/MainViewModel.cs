@@ -4,11 +4,25 @@ using NewEmployeeMngApp.Models;
 using System.Windows;
 using Microsoft.Data.SqlClient;
 using MahApps.Metro.Controls.Dialogs;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Reflection.Metadata;
+using NewEmployeeMngApp.Views;
 
 namespace NewEmployeeMngApp.ViewModels
 {
-    public class MainViewModel : Conductor<object>
+    public class MainViewModel : Conductor<IScreen>.Collection.OneActive //Conductor<object>
     {
+
+        public MainView _view { get; set; }
+
+        protected override void OnViewLoaded(object view)
+        {
+            base.OnViewLoaded(view);
+            _view = (MainView)view;
+
+        }
+
         private IDialogCoordinator dialogCoordinator;
 
         //public string Greeting => "헬로, 칼리번!";
@@ -268,5 +282,57 @@ namespace NewEmployeeMngApp.ViewModels
                 NewEmployee();
             }
         }
+
+        public void GotFocusMethod(object source)
+        {
+            var based = source as TextBox;
+            based.Focus();
+        } // close gotfocusmethod
+
+        public void SelectivelyIgnoreMouseButton(object sender, MouseButtonEventArgs eve)
+        {
+            TextBox tb = (sender as TextBox);
+
+            if (tb != null)
+            {
+                if (!tb.IsKeyboardFocusWithin)
+                {
+                    eve.Handled = true;
+
+                    tb.Focus();
+                }
+            }
+        } // close selectivelyignoremousebutton()
+
+        public void BtnNewEmployee_Clicked(object sender, MouseButtonEventArgs e)
+        {
+            Button button = sender as Button;
+
+            //string buttonContent = button.Content.ToString();
+            //string name = UpdateName;
+            //string grade = UpdateGrade;
+
+            MessageBox.Show("Hey!!");
+        }
+
+        public void SayHello()
+        {
+            MessageBox.Show(string.Format("Hello!"));
+        }
+
+        public void TestButton0(object sender)
+        {
+            if (!(sender is Button btn)) return;
+            MessageBox.Show($"TestButton0 : {btn.Content}");
+        }
+
+        public ICommand ButtonTest => new RelayCommand<object>(ButtonTestRun, o => o is Button);
+
+        private void ButtonTestRun(object obj)
+        {
+            if (!(obj is Button btn)) return;
+            _view.EmpName.Focus();
+        }
+
     }
 }

@@ -4,11 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:cal="http://www.caliburnproject.org"
         xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:NewEmployeeMngApp.Views"
+        xmlns:conv="clr-namespace:NewEmployeeMngApp"
         Dialog:DialogParticipation.Register="{Binding}"
         mc:Ignorable="d"
         Title="직원리스트" Height="450" Width="800">
+    <!--<mah:MetroWindow.Resources>
+        <conv:YourConverter x:Key="YourConverter" />
+    </mah:MetroWindow.Resources>-->
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -108,13 +113,16 @@
                         Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="NewEmployee" Content="신규"
                         Width="90" Height="40" ToolTip="신규직원"
-                        Style="{StaticResource MahApps.Styles.Button}" />
+                        Style="{StaticResource MahApps.Styles.Button}"
+                        Command="{Binding ButtonTest}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
                 <Button x:Name="SaveEmployee" Content="저장"
                     Width="90" Height="40" ToolTip="직원 저장하기"
                     Style="{StaticResource MahApps.Styles.Button.Square.Accent}"/>
                 <Button x:Name="DelEmployee" Content="삭제"
                         Width="90" Height="40" ToolTip="직원 삭제하기"
-                        Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}" />
+                        Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}"
+                        />
             </StackPanel>
         </Grid>
     </Grid>
