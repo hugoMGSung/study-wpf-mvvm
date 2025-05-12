@@ -34,3 +34,5 @@ WPF MVVM 학습 리포지토리
 - Visual Studio 오픈 후 최초 빌드(F6) 필요
 
 	![실행화면](https://raw.githubusercontent.com/hugoMGSung/study-wpf-mvvm/main/images/mvvm000.png)
+
+## Test!
