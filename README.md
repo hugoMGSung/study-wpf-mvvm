@@ -11,11 +11,11 @@ WPF MVVM 학습 리포지토리
 ### EmployeeMngApp
 - SQLServer와 데이터바인딩 확인
 
-	![이미지](https://raw.githubusercontent.com/hugoMGSung/study-wpf-mvvm/main/images/mvvm001.png)
+	<img src="./images/mvvm001.png" width="600">
 
 - 다이얼로그 문제 해결
 
-	![다이얼로그](https://raw.githubusercontent.com/hugoMGSung/study-wpf-mvvm/main/images/mvvm002.png)
+	<img src="./images/mvvm002.png" width="600">
 
 ## Basic Avaloina
 - Avalonia for Visual Studio 설치
@@ -33,6 +33,16 @@ WPF MVVM 학습 리포지토리
 
 - Visual Studio 오픈 후 최초 빌드(F6) 필요
 
-	![실행화면](https://raw.githubusercontent.com/hugoMGSung/study-wpf-mvvm/main/images/mvvm000.png)
+	<img src="./images/mvvm000.png" width="600">
 
-## Test!
+## Basic CommunityToolkit.Mvvm
+
+- MahApps.Metro Dialog
+
+	<img src="./images/mvvm003.png" width="600">
+
+	<img src="./images/mvvm004.png" width="600">
+
+## ReactiveUI
+
+- To be continued...
