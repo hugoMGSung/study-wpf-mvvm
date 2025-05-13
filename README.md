@@ -45,4 +45,9 @@ WPF MVVM 학습 리포지토리
 
 ## ReactiveUI
 
-- To be continued...
+1. WPF 프로젝트
+2. NuGet Package 설치
+	- ReactiveUI
+	- ReactiveUI.WPF
+
+	<img src="./images/mvvm005.png" width="600">
