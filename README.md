@@ -18,7 +18,7 @@ WPF MVVM 학습 리포지토리
 	<img src="./images/mvvm002.png" width="600">
 
 ## Basic Avaloina
-- Avalonia for Visual Studio 설치
+- Avalonia for Visual Studio 2022 설치
 	- https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS 
 
 - on Powershell
@@ -31,9 +31,13 @@ WPF MVVM 학습 리포지토리
 	> dotnet new avalonia.mvvm -o GetStartedApp  # 특정 위치에서 실행하여 전체 프로젝트 스케폴딩
 	```
 
-- Visual Studio 오픈 후 최초 빌드(F6) 필요
+- Visual Studio 실행 
+	
+	<img src="./images/mvvm006.png" width="650">
 
-	<img src="./images/mvvm000.png" width="600">
+- Youtube AvaloniaUI
+
+	<img src="./images/mvvm007.png" width="600">
 
 ## Basic CommunityToolkit.Mvvm
 

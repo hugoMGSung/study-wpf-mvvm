@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="350"
+		Width="600" Height="350"
+        x:Class="SecondAvaloniaApp.MainWindow"
+        Title="SecondAvaloniaApp">
+	<Grid RowDefinitions="Auto, *, Auto">
+		<!-- Title bar-->
+		<Grid Grid.Row="0" Height="40" Background="Orange" ColumnDefinitions="Auto, Auto, *, Auto, Auto">
+			<Rectangle Grid.Column="0" Fill="Red" Width="40"></Rectangle>
+			<Rectangle Grid.Column="1" Fill="Blue" Width="40"></Rectangle>
+			<StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+				<Label FontWeight="Bold" Content="AVALONIA" />
+				<Label FontWeight="Normal" Content="LOUDNESS METER" />
+			</StackPanel>
+			<Rectangle Grid.Column="3" Fill="Green" Width="40"></Rectangle>
+			<Rectangle Grid.Column="4" Fill="Yellow" Width="40"></Rectangle>
+			
+		</Grid>
+		<!-- Main Area-->
+		<Grid Grid.Row="1" ColumnDefinitions="Auto, Auto, *" Background="#333">
+			<!-- Volumn Bar -->
+			<Rectangle Grid.Column="0" Fill="Purple" Width="120"></Rectangle>
+			<!-- Detail Bar -->
+			<Rectangle Grid.Column="1" Fill="#CCC" Width="140"></Rectangle>
+			<!-- Graph -->
+			<Rectangle Grid.Column="2" Fill="Black"></Rectangle>
+		</Grid>
+
+		<!-- Bottom bar-->
+		<Grid Grid.Row="2" Margin="8" ColumnDefinitions="Auto, Auto, *, Auto, Auto, Auto, Auto, Auto">
+			<Button Grid.Column="0" Content="Stereo" Margin="0,0,8,0"/>
+			<Button Grid.Column="1" Content="YouTube"/>
+
+			<Button Grid.Column="3" Content="10 Sec" Margin="0,0,8,0"/>
+			<Button Grid.Column="4" Content="CONTINUOUS" Margin="0,0,8,0"/>
+			<Rectangle Grid.Column="5" Fill="Orange" Width="30" Margin="0,0,8,0"></Rectangle>
+			<Rectangle Grid.Column="6" Fill="Red" Width="30"></Rectangle>
+		</Grid>
+	</Grid>
+</Window>
