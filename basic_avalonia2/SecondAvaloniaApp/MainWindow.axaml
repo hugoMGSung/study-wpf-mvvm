@@ -2,18 +2,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="350"
-		Width="600" Height="350"
+        mc:Ignorable="d" d:DesignWidth="1048" d:DesignHeight="630"
+		Width="1048" Height="630"
         x:Class="SecondAvaloniaApp.MainWindow"
         Title="SecondAvaloniaApp">
+	
 	<Grid RowDefinitions="Auto, *, Auto">
 		<!-- Title bar-->
 		<Grid Grid.Row="0" Height="40" Background="Orange" ColumnDefinitions="Auto, Auto, *, Auto, Auto">
 			<Rectangle Grid.Column="0" Fill="Red" Width="40"></Rectangle>
 			<Rectangle Grid.Column="1" Fill="Blue" Width="40"></Rectangle>
 			<StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-				<Label FontWeight="Bold" Content="AVALONIA" />
-				<Label FontWeight="Normal" Content="LOUDNESS METER" />
+				<Label FontWeight="Bold" FontSize="24" Content="AVALONIA" />
+				<Label FontWeight="Normal" FontSize="24" Content="LOUDNESS METER" />
 			</StackPanel>
 			<Rectangle Grid.Column="3" Fill="Green" Width="40"></Rectangle>
 			<Rectangle Grid.Column="4" Fill="Yellow" Width="40"></Rectangle>
@@ -22,7 +23,82 @@
 		<!-- Main Area-->
 		<Grid Grid.Row="1" ColumnDefinitions="Auto, Auto, *" Background="#333">
 			<!-- Volumn Bar -->
-			<Rectangle Grid.Column="0" Fill="Purple" Width="120"></Rectangle>
+			<Grid Grid.Column="0" Width="150" RowDefinitions="*, Auto, Auto" Margin="0,20">
+				<!--Volumn Meter Gauge -->
+				<Grid Grid.Row="0" 
+					  Margin="10,0"
+					  RowDefinitions="3*,3*,3*,9*,5*,4*,9*,9*,9*,6*,Auto"
+					  ColumnDefinitions="Auto,*,Auto,Auto">
+
+					<Grid.Styles>
+						<Style Selector="Label">
+							<Setter Property="Foreground" Value="White"/>
+							<Setter Property="FontSize" Value="12"/>
+							<Setter Property="HorizontalAlignment" Value="Right" />
+						</Style>
+					</Grid.Styles>
+					<Label Grid.Row="0" Grid.Column="0" Content="0 —"></Label>
+					<Label Grid.Row="1" Grid.Column="0" Content="-3 —"></Label>
+					<Label Grid.Row="2" Grid.Column="0" Content="-6 —"></Label>
+					<Label Grid.Row="3" Grid.Column="0" Content="-9 —"></Label>
+					<Label Grid.Row="4" Grid.Column="0" Content="-18 —"></Label>
+					<Label Grid.Row="5" Grid.Column="0" Content="-23 —"></Label>
+					<Label Grid.Row="6" Grid.Column="0" Content="-27 —"></Label>
+					<Label Grid.Row="7" Grid.Column="0" Content="-36 —"></Label>
+					<Label Grid.Row="8" Grid.Column="0" Content="-45 —"></Label>
+					<Label Grid.Row="9" Grid.Column="0" Content="-54 —"></Label>
+					<Label Grid.Row="10" Grid.Column="0" Content=""></Label>
+
+					<!-- Volumn Bar -->
+					<Canvas Grid.Row="0" Grid.Column="1" Grid.RowSpan="11" Width="20">
+						<Grid RowDefinitions="23*,37*">
+							<Rectangle Fill="White" Width="20" Height="20"
+									   Canvas.Top="0"></Rectangle>	
+						</Grid>
+						
+					</Canvas>
+
+					<Label Grid.Row="0" Grid.Column="2" Content="—"></Label>
+					<Label Grid.Row="1" Grid.Column="2" Content="—"></Label>
+					<Label Grid.Row="2" Grid.Column="2" Content="—"></Label>
+					<Label Grid.Row="3" Grid.Column="2" Content="—"></Label>
+					<Label Grid.Row="4" Grid.Column="2" Content="—"></Label>
+					<Label Grid.Row="5" Grid.Column="2" Content="—"></Label>
+					<Label Grid.Row="6" Grid.Column="2" Content="—"></Label>
+					<Label Grid.Row="7" Grid.Column="2" Content="—"></Label>
+					<Label Grid.Row="8" Grid.Column="2" Content="—"></Label>
+					<Label Grid.Row="9" Grid.Column="2" Content="—"></Label>
+					<Label Grid.Row="10" Grid.Column="2" Content=""></Label>
+
+					<!-- LeftPointed Arrow -->
+					<Canvas Grid.Row="0" Grid.Column="3" Grid.RowSpan="11" Width="20"
+							Background="Orange">
+						<Rectangle Canvas.Top="0" Fill="White" Width="20" Height="20"></Rectangle>
+					</Canvas>
+				</Grid>
+				
+				
+				<!-- LUFS Label -->
+				<Label Grid.Row="1" Foreground="White" FontSize="20" HorizontalAlignment="Center" Margin="0,5">LUFS</Label>
+
+				<!-- Volumn Bar Buttons -->
+				<StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+
+					<StackPanel.Styles>
+						<Style Selector="Button">
+							<Setter Property="Foreground" Value="White"/>
+							<Setter Property="FontSize" Value="12"/>
+							<Setter Property="FontWeight" Value="Bold"/>
+							<Setter Property="Background" Value="#7F98C7"></Setter>
+							<Setter Property="CornerRadius" Value="20"></Setter>
+							<Setter Property="Padding" Value="7,2"></Setter>
+						</Style>
+					</StackPanel.Styles>
+					
+					<Button Content="A" Margin="0,0,10,0"/>
+					<Button Content="INT-LRA"/>
+				</StackPanel>
+			</Grid>
 			<!-- Detail Bar -->
 			<Rectangle Grid.Column="1" Fill="#CCC" Width="140"></Rectangle>
 			<!-- Graph -->
