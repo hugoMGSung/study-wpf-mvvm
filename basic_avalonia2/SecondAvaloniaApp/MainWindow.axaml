@@ -35,39 +35,47 @@
 							<Setter Property="Foreground" Value="White"/>
 							<Setter Property="FontSize" Value="12"/>
 							<Setter Property="HorizontalAlignment" Value="Right" />
+							<Setter Property="Padding" Value="0"/>
 						</Style>
 					</Grid.Styles>
-					<Label Grid.Row="0" Grid.Column="0" Content="0 —"></Label>
-					<Label Grid.Row="1" Grid.Column="0" Content="-3 —"></Label>
-					<Label Grid.Row="2" Grid.Column="0" Content="-6 —"></Label>
-					<Label Grid.Row="3" Grid.Column="0" Content="-9 —"></Label>
-					<Label Grid.Row="4" Grid.Column="0" Content="-18 —"></Label>
-					<Label Grid.Row="5" Grid.Column="0" Content="-23 —"></Label>
-					<Label Grid.Row="6" Grid.Column="0" Content="-27 —"></Label>
-					<Label Grid.Row="7" Grid.Column="0" Content="-36 —"></Label>
-					<Label Grid.Row="8" Grid.Column="0" Content="-45 —"></Label>
-					<Label Grid.Row="9" Grid.Column="0" Content="-54 —"></Label>
+					<Label Grid.Row="0" Grid.Column="0" Content="0 -"></Label>
+					<Label Grid.Row="1" Grid.Column="0" Content="-3 -"></Label>
+					<Label Grid.Row="2" Grid.Column="0" Content="-6 -"></Label>
+					<Label Grid.Row="3" Grid.Column="0" Content="-9 -"></Label>
+					<Label Grid.Row="4" Grid.Column="0" Content="-18 -"></Label>
+					<Label Grid.Row="5" Grid.Column="0" Content="-23 -"></Label>
+					<Label Grid.Row="6" Grid.Column="0" Content="-27 -"></Label>
+					<Label Grid.Row="7" Grid.Column="0" Content="-36 -"></Label>
+					<Label Grid.Row="8" Grid.Column="0" Content="-45 -"></Label>
+					<Label Grid.Row="9" Grid.Column="0" Content="-54 -"></Label>
 					<Label Grid.Row="10" Grid.Column="0" Content=""></Label>
 
 					<!-- Volumn Bar -->
-					<Canvas Grid.Row="0" Grid.Column="1" Grid.RowSpan="11" Width="20">
-						<Grid RowDefinitions="23*,37*">
-							<Rectangle Fill="White" Width="20" Height="20"
-									   Canvas.Top="0"></Rectangle>	
-						</Grid>
+					<Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="11" RowDefinitions="23*,37*">
+						<Rectangle Grid.Row="0" Margin="0,8,0,-8" Fill="#B05C4E"  Width="20"></Rectangle>
+						<Rectangle Grid.Row="1" Margin="0,8,0,0"  Fill="White" Width="20"></Rectangle>
 						
-					</Canvas>
+						<Canvas Width="20"
+							Background="Red">
+							<Grid RowDefinitions="23*,37*">
+								
+							</Grid>
 
-					<Label Grid.Row="0" Grid.Column="2" Content="—"></Label>
-					<Label Grid.Row="1" Grid.Column="2" Content="—"></Label>
-					<Label Grid.Row="2" Grid.Column="2" Content="—"></Label>
-					<Label Grid.Row="3" Grid.Column="2" Content="—"></Label>
-					<Label Grid.Row="4" Grid.Column="2" Content="—"></Label>
-					<Label Grid.Row="5" Grid.Column="2" Content="—"></Label>
-					<Label Grid.Row="6" Grid.Column="2" Content="—"></Label>
-					<Label Grid.Row="7" Grid.Column="2" Content="—"></Label>
-					<Label Grid.Row="8" Grid.Column="2" Content="—"></Label>
-					<Label Grid.Row="9" Grid.Column="2" Content="—"></Label>
+						</Canvas>
+					</Grid>
+					
+					
+
+					<Label Grid.Row="0" Grid.Column="2" Content="-"></Label>
+					<Label Grid.Row="1" Grid.Column="2" Content="-"></Label>
+					<Label Grid.Row="2" Grid.Column="2" Content="-"></Label>
+					<Label Grid.Row="3" Grid.Column="2" Content="-"></Label>
+					<Label Grid.Row="4" Grid.Column="2" Content="-"></Label>
+					<Label Grid.Row="5" Grid.Column="2" Content="-"></Label>
+					<Label Grid.Row="6" Grid.Column="2" Content="-"></Label>
+					<Label Grid.Row="7" Grid.Column="2" Content="-"></Label>
+					<Label Grid.Row="8" Grid.Column="2" Content="-"></Label>
+					<Label Grid.Row="9" Grid.Column="2" Content="-"></Label>
 					<Label Grid.Row="10" Grid.Column="2" Content=""></Label>
 
 					<!-- LeftPointed Arrow -->
